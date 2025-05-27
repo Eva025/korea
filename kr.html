@@ -2,97 +2,50 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>韓國行 · 旅遊小筆記</title>
-  <style>
-    body {
-      font-family: "Noto Sans TC", sans-serif;
-      line-height: 1.6;
-      background: #fffaf4;
-      color: #333;
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    h1, h2 {
-      color: #d94f4f;
-    }
-    section {
-      margin-bottom: 2rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px dashed #ccc;
-    }
-    .checklist ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .checklist li::before {
-      content: "✅ ";
-    }
-    .day-plan {
-      background: #fff0f0;
-      padding: 1rem;
-      border-radius: 10px;
-      margin-top: 1rem;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>韓國行 · 行程計畫</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <h1>🇰🇷 韓國行程小手冊</h1>
+    <p>Let's gooo！首爾我們來啦🔥</p>
+  </header>
 
-  <h1>韓國行 🇰🇷 · Travel Notes</h1>
+  <nav class="day-buttons">
+    <button onclick="toggleDay('day1')">📅 Day 1 - 8/12</button>
+    <button onclick="toggleDay('day2')">📅 Day 2 - 8/13</button>
+    <button onclick="toggleDay('day3')">📅 Day 3 - 8/14</button>
+  </nav>
 
-  <section>
-    <h2>✈️ 航班資訊</h2>
-    <p><strong>去程：</strong>桃機 → 仁川  8/12 13:20-16:50</p>
-    <p><strong>回程：</strong>仁川 → 桃機  8/17 16:10-17:50</p>
+  <section id="day1" class="day-content">
+    <h2>Day 1 - 8/12</h2>
+    <p>抵達仁川後買 wow-pass 和天氣卡，搭 6019 公車前往民宿。</p>
+    <p>晚上吃飯、熟悉地鐵站、輕鬆逛逛。</p>
   </section>
 
-  <section>
-    <h2>🏨 住宿地點</h2>
-    <p>首爾市銅雀區城大路1街13-1</p>
-    <p>서울시 동작구 성대로1가길 13-1</p>
-  </section>
-
-  <section class="checklist">
-    <h2>🎒 行前準備事項</h2>
+  <section id="day2" class="day-content">
+    <h2>Day 2 - 8/13</h2>
     <ul>
-      <li>護照、電子入境（可三天前申請）</li>
-      <li>個人物品、牙刷、牙膏、梳子自己帶</li>
-      <li>Sim卡/eSim 建議台灣先買</li>
-      <li>行動電源放隨身，容量需小於20000mAh</li>
-      <li>個人藥品、防曬、不要帶 EVE 止痛藥</li>
-      <li>錢！錢！錢！記得帶台幣/美金</li>
-      <li>轉換插頭、充電器</li>
-      <li>門票與地鐵卡（電子票為主）</li>
-      <li>購物袋、推車（看人用）</li>
+      <li>📍 COEX 水族館 & 星空圖書館（同一棟）</li>
+      <li>📍 江南10號出口逛街 → 韩方Daega参鸡汤（四號出口）</li>
+      <li>📍 江南地下街 → 新沙洞逛街</li>
+      <li>📍 奉恩寺 → 吃烤肉：給豚的男人</li>
+      <li>📍 SM Town 手印牆 打卡！</li>
     </ul>
   </section>
 
-  <section>
-    <h2>📅 Day 1 - 8/12</h2>
-    <div class="day-plan">
-      <p>抵達仁川後買 wow-pass 和天氣卡，搭 6019 公車前往民宿。</p>
-      <p>晚上吃飯、熟悉地鐵站、輕鬆逛逛。</p>
-    </div>
+  <section id="day3" class="day-content">
+    <h2>Day 3 - 8/14</h2>
+    <p>整天安排：愛寶樂園！衝衝衝🎢</p>
   </section>
 
-  <section>
-    <h2>📅 Day 2 - 8/13</h2>
-    <div class="day-plan">
-      <p>📍 COEX 水族館 & 星空圖書館（同一棟）</p>
-      <p>📍 江南10號出口逛街 → 韩方Daega参鸡汤（四號出口）</p>
-      <p>📍 江南地下街 → 新沙洞逛街</p>
-      <p>📍 奉恩寺 → 吃烤肉：給豚的男人</p>
-      <p>📍 SM Town 手印牆 打卡！</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>📅 Day 3 - 8/14</h2>
-    <div class="day-plan">
-      <p>整天安排：愛寶樂園！衝衝衝🎢</p>
-    </div>
-  </section>
-
+  <script>
+    function toggleDay(dayId) {
+      const contents = document.querySelectorAll('.day-content');
+      contents.forEach(section => section.style.display = 'none');
+      document.getElementById(dayId).style.display = 'block';
+    }
+  </script>
 </body>
 </html>

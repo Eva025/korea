@@ -1,0 +1,60 @@
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  background: #fffaf4;
+  color: #333;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 0 1rem;
+  background: #ffe1e1;
+  color: #a04444;
+  border-bottom: 2px dashed #f88;
+}
+
+.day-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.day-buttons button {
+  background-color: #f88;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.day-buttons button:hover {
+  background-color: #e66;
+}
+
+.day-content {
+  display: none;
+  background: #fff0f0;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.day-content h2 {
+  color: #d94f4f;
+}
+
+.day-content ul {
+  padding-left: 1.5rem;
+}
+
+.day-content ul li {
+  margin-bottom: 0.5rem;
+  list-style-type: "🌟 ";
+}
